@@ -6,8 +6,9 @@ import PropTypes from 'prop-types';
 
 class List extends React.Component {
   static propTypes = {
-    title: PropTypes.node,
-    children: PropTypes.node,
+    title: PropTypes.node.isRequired,
+    children: PropTypes.node.isRequired,
+    image: PropTypes.node.isRequired,
   }
   static defaultProps = {
     children: <p>I can do all the things!!!</p>,
@@ -15,18 +16,22 @@ class List extends React.Component {
 
   render() {
     return (
-      <div id="list">
-        <section className={styles.component}>
-          <Hero titleText={this.props.title} />
+      <section className={styles.component}>
+        <h2 className={styles.subtitle}>
+          <Hero
+            titleText={this.props.title}
+            backgroundImage={this.props.image}
+          />
           <div className={styles.description}>
             {this.props.children}
           </div>
-          <img className={this.props.image} />
-          <Column className={this.props.Column} />
-          <div className={this.props.Column} />
-          <div className={this.props.Column} />
-        </section>
-      </div>
+        </h2>
+        <div className={styles.columns}>
+          <Column title='Animals' />
+          <Column title='Plants' />
+          <Column title='Minerals' />
+        </div>
+      </section>
     )
   }
 }
