@@ -9,16 +9,16 @@ import Creator from '../Creator/Creator';
 
 class List extends React.Component {
   state = {
-    columns: this.props.columns || []
+    columns: this.props.columns || [],
   };
   static propTypes = {
     title: PropTypes.node.isRequired,
     description: PropTypes.node,
     columns: PropTypes.array,
-    image: PropTypes.string.isRequired
+    image: PropTypes.string.isRequired,
   };
   static defaultProps = {
-    description: settings.defaultListDescription
+    description: settings.defaultListDescription,
   };
   addColumn(title) {
     this.setState(state => ({
@@ -29,10 +29,10 @@ class List extends React.Component {
             ? state.columns[state.columns.length - 1].key + 1
             : 0,
           title,
-          icon: "list-alt",
-          cards: []
-        }
-      ]
+          icon: 'list-alt',
+          cards: [],
+        },
+      ],
     }));
   }
   render() {
