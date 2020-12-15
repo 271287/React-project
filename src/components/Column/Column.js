@@ -17,7 +17,6 @@ class Column extends React.Component {
     icon: PropTypes.node,
     addColumn: PropTypes.func,
   }
-
   render() {
     const { title, icon, cards, addColumn } = this.props;
     return (
@@ -27,7 +26,7 @@ class Column extends React.Component {
             <Icon name={icon} />
           </span>
         </h3>
-        <div>
+        <div className={styles.cards}>
           {cards.map(cardData => (
             <Card key={cardData.id} {...cardData} />
           ))}
