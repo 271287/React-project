@@ -14,8 +14,7 @@ const createActionName = name => `app/${reducerName}/${name}`;
 export const SEARCH_STRING = createActionName('SEARCH_STRING');
 
 // action creators
-export const createActionSearchString = payload => ({ payload: { ...payload, id: shortid.generate() }, type: SEARCH_STRING });
-
+export const createAction_changeSearchString = payload => ({ payload: { ...payload, id: shortid.generate() }, type: SEARCH_STRING });
 
 // reducer
 export default function reducer(statePart = '', action = {}) {
