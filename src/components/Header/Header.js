@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, Link, BrowserRouter } from './../../node_modules/react-router-dom';
+import { NavLink, Link, BrowserRouter } from '../../../node_modules/react-router-dom';
 import styles from './Header.scss';
 import Container from '../Container/Container';
 import Icon from '../Icon/Icon';

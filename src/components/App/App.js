@@ -5,11 +5,11 @@ import Info from '../Info/Info';
 import Faq from '../Faq/Faq';
 import { BrowserRouter, Route } from 'react-router-dom';
 import MainLayout from '../MainLayout/MainLayout';
-import { AnimatedSwitch } from 'react-router-transition';
+import { AnimatedSwitch } from '../../../node_modules/react-router-transition';
+import List from '../List/ListContainer';
 
 const App = () => (
   <div>
-
     <BrowserRouter>
       <MainLayout>
         <AnimatedSwitch
@@ -18,10 +18,10 @@ const App = () => (
           atActive={{ opacity: 1 }}
           className={styles.switchWrapper}
         >
-          Mimo tych z
           <Route exact path="/" component={Home} />
           <Route exact path="/info" component={Info} />
           <Route exact path="/faq" component={Faq} />
+          <Route exact path="/list/:id" component={List} />
         </AnimatedSwitch>
       </MainLayout>
     </BrowserRouter>
