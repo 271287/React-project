@@ -5,6 +5,7 @@ import Container from '../Container/Container';
 import Icon from '../Icon/Icon';
 import { settings } from '../../data/dataStore';
 import PropTypes from 'prop-types';
+import Search from '../Search/Search';
 
 class Header extends React.Component {
   static propTypes = {
@@ -41,6 +42,7 @@ class Header extends React.Component {
                   {infoTitle}
                 </NavLink>
               </nav>
+              <Search />
             </BrowserRouter>
           </div>
         </Container>
